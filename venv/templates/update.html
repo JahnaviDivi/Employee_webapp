@@ -1,0 +1,27 @@
+{% extends "base_bootstrap.html" %}
+{% block body %}
+ 
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{Employee.Name}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="Designation" value="{{Employee.Designation}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="Address" value="{{Employee.Address}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="Phone" value="{{Employee.Phone}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+{% endblock %}
